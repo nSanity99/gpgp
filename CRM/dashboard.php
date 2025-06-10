@@ -27,10 +27,11 @@ $user_role_display = htmlspecialchars(isset($_SESSION['ruolo']) ? $_SESSION['ruo
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Gruppo Vitolo</title>
+    <link rel="stylesheet" href="assets/style.css">
     <style>
         /* Stili CSS di base (invariati) */
         html, body { height: 100%; margin: 0; padding: 0; }
-        body { background-color: #f8f9fa; color: #495057; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; display: flex; align-items: center; justify-content: center; }
+        body { background: linear-gradient(135deg, rgba(255,74,68,0.25) 0%, rgba(87,35,35,0.65) 100%); color: #495057; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; display: flex; align-items: center; justify-content: center; }
         .dashboard-container { max-width: 1200px; width: 100%; padding: 0 15px; animation: fadeInSlideUp 0.6s ease-out forwards; margin: 25px auto; background-color: transparent; box-shadow: none; border-top: none; }
         .dashboard-header { display: flex; justify-content: space-between; align-items: center; background-color: #ffffff; padding: 25px 40px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.06); border-bottom: 5px solid #B08D57; margin-bottom: 40px; }
         .header-branding { display: flex; align-items: center; }
@@ -92,7 +93,7 @@ $user_role_display = htmlspecialchars(isset($_SESSION['ruolo']) ? $_SESSION['ruo
     <div class="dashboard-container">
         <header class="dashboard-header">
             <div class="header-branding">
-                <a href="dashboard.php" class="header-logo-link"><img src="logo.png" alt="Logo Gruppo Vitolo" class="logo"></a>
+                <a href="dashboard.php" class="header-logo-link"><img src="assets/logo.png" alt="Logo Gruppo Vitolo" class="logo"></a>
                 <div class="header-titles">
                     <h1>Pannello Principale</h1>
                     <h2><?php echo ($user_role_from_session === 'admin') ? 'Vista Amministrazione' : 'Area Riservata'; ?></h2>
@@ -179,7 +180,7 @@ $user_role_display = htmlspecialchars(isset($_SESSION['ruolo']) ? $_SESSION['ruo
         <?php endif; ?>
 
         <div class="footer-logo-area">
-            <img src="logo.png" alt="Logo Gruppo Vitolo">
+            <img src="assets/logo.png" alt="Logo Gruppo Vitolo">
         </div>
     </div>
 

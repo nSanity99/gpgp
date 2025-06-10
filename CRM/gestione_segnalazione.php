@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'db_config.php';
+require_once __DIR__.'/includes/db_config.php';
 
 // Sicurezza: Solo gli admin possono accedere
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true || !isset($_SESSION['ruolo']) || $_SESSION['ruolo'] !== 'admin') {
@@ -60,11 +60,12 @@ if ($conn->connect_error) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestione Segnalazioni - Gruppo Vitolo</title>
+    <link rel="stylesheet" href="assets/style.css">
     <style>
         /* Stile coerente con le altre pagine di gestione */
         html { box-sizing: border-box; }
         *, *:before, *:after { box-sizing: inherit; }
-        body { background-color: #f8f9fa; color: #495057; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; padding: 0; }
+        body { background: linear-gradient(135deg, rgba(255,74,68,0.25) 0%, rgba(87,35,35,0.65) 100%); color: #495057; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; padding: 0; }
         .module-page-container { max-width: 1100px; margin: 25px auto; padding: 0 15px; }
         .page-header { display: flex; justify-content: space-between; align-items: center; background-color: #ffffff; padding: 18px 30px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.05); border-bottom: 4px solid #B08D57; margin-bottom: 30px; }
         .header-branding { display: flex; align-items: center; gap: 15px; }
@@ -113,7 +114,7 @@ if ($conn->connect_error) {
     <div class="module-page-container">
         <header class="page-header">
             <div class="header-branding">
-                <a href="dashboard.php"><img src="logo.png" alt="Logo Gruppo Vitolo" class="logo"></a>
+                <a href="dashboard.php"><img src="assets/logo.png" alt="Logo Gruppo Vitolo" class="logo"></a>
                 <div class="header-titles">
                     <h1>Gestione Segnalazioni</h1>
                     <h2>Pannello di Amministrazione</h2>

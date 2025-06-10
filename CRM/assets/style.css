@@ -9,7 +9,7 @@ html {
     box-sizing: inherit;
 }
 body {
-    background-color: #f8f9fa;
+    background: linear-gradient(135deg, rgba(255,74,68,0.25) 0%, rgba(87,35,35,0.65) 100%);
     color: #495057;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
