@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once 'db_config.php';
+require_once __DIR__.'/includes/db_config.php';
 
 // Verifica se l'utente è loggato, altrimenti reindirizza alla pagina di login
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
@@ -81,18 +81,18 @@ error_log("--- [{$timestamp}] Accesso a form_page.php UTENTE: " . htmlspecialcha
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modulo Richiesta Acquisti - Gruppo Vitolo</title>
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="assets/style.css"> 
     <style>
         html {
             scroll-behavior: smooth; 
         }
-        body { 
-            background-color: #f8f9fa; 
-            color: #495057; 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        body {
+            background: linear-gradient(135deg, rgba(255,74,68,0.25) 0%, rgba(87,35,35,0.65) 100%);
+            color: #495057;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            margin: 0; 
-            padding: 0; 
+            margin: 0;
+            padding: 0;
             overflow-y: auto; 
             min-height: 100vh; 
         }
@@ -173,7 +173,7 @@ error_log("--- [{$timestamp}] Accesso a form_page.php UTENTE: " . htmlspecialcha
     <div class="page-outer-container">
         <header class="module-header">
             <div class="header-branding">
-                <a href="dashboard.php"> <img src="logo.png" alt="Logo Gruppo Vitolo" class="logo">
+                <a href="dashboard.php"> <img src="assets/logo.png" alt="Logo Gruppo Vitolo" class="logo">
                 </a>
                 <div class="header-titles">
                     <h1>Modulo Richiesta Acquisti</h1>
@@ -301,7 +301,7 @@ error_log("--- [{$timestamp}] Accesso a form_page.php UTENTE: " . htmlspecialcha
             </form>
         </main>
         <footer class="footer-logo-area">
-            <img src="logo.png" alt="Logo Gruppo Vitolo">
+            <img src="assets/logo.png" alt="Logo Gruppo Vitolo">
         </footer>
     </div>
 

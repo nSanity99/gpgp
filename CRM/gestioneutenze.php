@@ -93,10 +93,10 @@ if ($action === 'list_feedback' || strpos($action, 'user_') === 0) { // user_cre
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestione Utenze - Richiesta Acquisti</title>
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="assets/style.css"> 
     <style>
         body {
-            background-color: #f8f9fa; /* Stesso sfondo della dashboard */
+            background: linear-gradient(135deg, rgba(255,74,68,0.25) 0%, rgba(87,35,35,0.65) 100%); /* Stesso sfondo della dashboard */
             color: #495057;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -164,7 +164,7 @@ if ($action === 'list_feedback' || strpos($action, 'user_') === 0) { // user_cre
 
         .form-container { margin-top: 25px; padding: 25px; background-color: #f8f9fa; border: 1px solid #e9ecef; border-radius: 6px; }
         .form-container h3 { margin-top: 0; margin-bottom: 20px; color: #2E572E; font-size: 1.3em; font-weight: 600;}
-        /* Assicurati che .form-group, input, select, label da style.css siano coerenti */
+        /* Assicurati che .form-group, input, select, label da assets/style.css siano coerenti */
         /* Esempio di override se necessario per input in questo contesto */
         .form-container .form-control { /* Se usi questa classe per gli input */
             border-radius: 5px;
@@ -193,7 +193,7 @@ if ($action === 'list_feedback' || strpos($action, 'user_') === 0) { // user_cre
     <div class="page-outer-container">
         <header class="module-header">
             <div class="header-branding">
-                <a href="dashboard.php" class="header-logo-link"><img src="logo.png" alt="Logo Gruppo Vitolo" class="logo"></a>
+                <a href="dashboard.php" class="header-logo-link"><img src="assets/logo.png" alt="Logo Gruppo Vitolo" class="logo"></a>
                 <div class="header-titles">
                     <h1>Gestione Utenze</h1>
                     <h2>Applicazione Richiesta Acquisti</h2>
@@ -313,7 +313,7 @@ if ($action === 'list_feedback' || strpos($action, 'user_') === 0) { // user_cre
             <?php endif; ?>
         </main>
         <footer class="footer-logo-area">
-            <img src="logo.png" alt="Logo Gruppo Vitolo">
+            <img src="assets/logo.png" alt="Logo Gruppo Vitolo">
         </footer>
     </div>
 </body>

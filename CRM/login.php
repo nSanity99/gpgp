@@ -73,6 +73,7 @@ error_log("--- Fine tentativo di login (con ruoli) --- [" . date("Y-m-d H:i:s") 
     <meta charset="UTF-8">
     <title>Login - Gruppo Vitolo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
     <style>
         * {
             margin: 0; padding: 0; box-sizing: border-box;
@@ -85,7 +86,7 @@ error_log("--- Fine tentativo di login (con ruoli) --- [" . date("Y-m-d H:i:s") 
         }
 
         body {
-            background: linear-gradient(135deg,rgba(255, 74, 68, 0.8) 0%,rgb(87, 35, 35) 100%);
+            background: linear-gradient(135deg,rgba(255, 74, 68, 0.6) 0%,rgb(87, 35, 35, 0.9) 100%);
             position: relative;
         }
 
@@ -219,7 +220,7 @@ error_log("--- Fine tentativo di login (con ruoli) --- [" . date("Y-m-d H:i:s") 
     <div id="particles-js"></div>
 
     <div class="login-container">
-        <img src="logo.png" class="logo" alt="Logo Gruppo Vitolo">
+        <img src="assets/logo.png" class="logo" alt="Logo Gruppo Vitolo">
         <h1>Gruppo Vitolo</h1>
         <h2>Accesso Riservato</h2>
 

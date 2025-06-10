@@ -1,7 +1,7 @@
 <?php
 // File: order_actions.php
 session_start();
-require_once 'db_config.php';
+require_once __DIR__.'/../includes/db_config.php';
 
 ob_clean(); 
 header('Content-Type: application/json');

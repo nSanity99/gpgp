@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'db_config.php';
+require_once __DIR__.'/includes/db_config.php';
 
 // Sicurezza: Verifica che l'utente sia loggato
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
@@ -38,11 +38,11 @@ if (isset($_GET['status'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invia Segnalazione - Gruppo Vitolo</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/style.css">
     <style>
         /* Stili ripresi e adattati da form_page.php per coerenza */
         html { scroll-behavior: smooth; }
-        body { background-color: #f8f9fa; color: #495057; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; padding: 0; }
+        body { background: linear-gradient(135deg, rgba(255,74,68,0.25) 0%, rgba(87,35,35,0.65) 100%); color: #495057; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; padding: 0; }
         .page-outer-container { max-width: 900px; padding: 0; animation: fadeInSlideUp 0.6s ease-out forwards; margin: 25px auto; }
         .module-header { display: flex; justify-content: space-between; align-items: center; background-color: #ffffff; padding: 18px 30px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.05); border-bottom: 4px solid #B08D57; margin-bottom: 30px; }
         .header-branding { display: flex; align-items: center; }
@@ -76,7 +76,7 @@ if (isset($_GET['status'])) {
     <div class="page-outer-container">
         <header class="module-header">
             <div class="header-branding">
-                <a href="dashboard.php"><img src="logo.png" alt="Logo Gruppo Vitolo" class="logo"></a>
+                <a href="dashboard.php"><img src="assets/logo.png" alt="Logo Gruppo Vitolo" class="logo"></a>
                 <div class="header-titles">
                     <h1>Modulo di Segnalazione</h1>
                     <h2>Gruppo Vitolo</h2>
@@ -129,7 +129,7 @@ if (isset($_GET['status'])) {
             </form>
         </main>
         <footer class="footer-logo-area">
-            <img src="logo.png" alt="Logo Gruppo Vitolo">
+            <img src="assets/logo.png" alt="Logo Gruppo Vitolo">
         </footer>
     </div>
 </body>

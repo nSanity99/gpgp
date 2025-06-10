@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'db_config.php';
+require_once __DIR__.'/includes/db_config.php';
 
 ini_set('log_errors', 1);
 ini_set('error_log', 'C:/xampp/php_error.log');
@@ -52,8 +52,9 @@ if ($conn->connect_error) {
 <head>
     <meta charset="UTF-8">
     <title>Log Azioni Utenti</title>
+    <link rel="stylesheet" href="assets/style.css">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8f9fa; margin:0; padding:0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, rgba(255,74,68,0.25) 0%, rgba(87,35,35,0.65) 100%); margin:0; padding:0; }
         .page-outer-container { max-width: 1200px; margin: 20px auto; padding:0 15px; }
         .module-header { display:flex; justify-content:space-between; align-items:center; background-color:#fff; padding:20px 30px; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.06); border-bottom:5px solid #B08D57; margin-bottom:30px; }
         .header-branding{ display:flex; align-items:center; }
@@ -81,7 +82,7 @@ if ($conn->connect_error) {
 <div class="page-outer-container">
     <header class="module-header">
         <div class="header-branding">
-            <a href="dashboard.php" class="header-logo-link"><img src="logo.png" alt="Logo Gruppo Vitolo" class="logo"></a>
+            <a href="dashboard.php" class="header-logo-link"><img src="assets/logo.png" alt="Logo Gruppo Vitolo" class="logo"></a>
             <div class="header-titles">
                 <h1>Log Azioni</h1>
                 <h2>Area Amministrazione</h2>
@@ -150,7 +151,7 @@ if ($conn->connect_error) {
         <?php endif; ?>
     </main>
     <footer class="footer-logo-area">
-        <img src="logo.png" alt="Logo Gruppo Vitolo">
+        <img src="assets/logo.png" alt="Logo Gruppo Vitolo">
     </footer>
 </div>
 </body>
