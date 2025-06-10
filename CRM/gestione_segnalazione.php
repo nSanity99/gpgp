@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'db_config.php';
+require_once __DIR__.'/includes/db_config.php';
 
 // Sicurezza: Solo gli admin possono accedere
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true || !isset($_SESSION['ruolo']) || $_SESSION['ruolo'] !== 'admin') {
@@ -113,7 +113,7 @@ if ($conn->connect_error) {
     <div class="module-page-container">
         <header class="page-header">
             <div class="header-branding">
-                <a href="dashboard.php"><img src="logo.png" alt="Logo Gruppo Vitolo" class="logo"></a>
+                <a href="dashboard.php"><img src="assets/logo.png" alt="Logo Gruppo Vitolo" class="logo"></a>
                 <div class="header-titles">
                     <h1>Gestione Segnalazioni</h1>
                     <h2>Pannello di Amministrazione</h2>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'db_config.php';
+require_once __DIR__.'/includes/db_config.php';
 
 // Sicurezza: Verifica che l'utente sia loggato
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
@@ -38,7 +38,7 @@ if (isset($_GET['status'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invia Segnalazione - Gruppo Vitolo</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/style.css">
     <style>
         /* Stili ripresi e adattati da form_page.php per coerenza */
         html { scroll-behavior: smooth; }
@@ -76,7 +76,7 @@ if (isset($_GET['status'])) {
     <div class="page-outer-container">
         <header class="module-header">
             <div class="header-branding">
-                <a href="dashboard.php"><img src="logo.png" alt="Logo Gruppo Vitolo" class="logo"></a>
+                <a href="dashboard.php"><img src="assets/logo.png" alt="Logo Gruppo Vitolo" class="logo"></a>
                 <div class="header-titles">
                     <h1>Modulo di Segnalazione</h1>
                     <h2>Gruppo Vitolo</h2>
@@ -129,7 +129,7 @@ if (isset($_GET['status'])) {
             </form>
         </main>
         <footer class="footer-logo-area">
-            <img src="logo.png" alt="Logo Gruppo Vitolo">
+            <img src="assets/logo.png" alt="Logo Gruppo Vitolo">
         </footer>
     </div>
 </body>

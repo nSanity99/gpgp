@@ -1,5 +1,5 @@
 <?php
-require_once 'db_config.php';
+require_once __DIR__ . '/db_config.php';
 function log_action($user_id, $username, $action, $details = null) {
     global $db_host, $db_user, $db_pass, $db_name, $db_port;
     $conn = isset($db_port)

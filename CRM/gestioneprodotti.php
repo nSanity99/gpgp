@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'db_config.php';
+require_once __DIR__.'/includes/db_config.php';
 
 // Solo admin
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true || ($_SESSION['ruolo'] ?? '') !== 'admin') {
@@ -175,7 +175,7 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestione Prodotti</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/style.css">
     <style>
         body { background-color: #f8f9fa; color: #495057; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; }
         .page-outer-container { max-width: 900px; margin: 25px auto; padding: 0; animation: fadeInSlideUp 0.6s ease-out forwards; }
@@ -203,7 +203,7 @@ $conn->close();
     <div class="page-outer-container">
         <header class="module-header">
             <div class="header-branding">
-                <a href="dashboard.php"><img src="logo.png" alt="Logo Gruppo Vitolo" class="logo"></a>
+                <a href="dashboard.php"><img src="assets/logo.png" alt="Logo Gruppo Vitolo" class="logo"></a>
                 <div class="header-titles">
                     <h1>Gestione Prodotti</h1>
                     <h2>Catalogo</h2>
@@ -312,7 +312,7 @@ $conn->close();
             </table>
         </main>
         <footer class="footer-logo-area">
-            <img src="logo.png" alt="Logo Gruppo Vitolo">
+            <img src="assets/logo.png" alt="Logo Gruppo Vitolo">
         </footer>
     </div>
 </body>

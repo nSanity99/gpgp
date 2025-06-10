@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'db_config.php';
+require_once __DIR__.'/includes/db_config.php';
 
 // --- Blocco Sicurezza ---
 // Controlliamo solo che l'utente sia loggato, non importa il ruolo.
@@ -80,7 +80,7 @@ if ($conn->connect_error) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Le Mie Richieste - Storico Acquisti</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/style.css">
     <style>
         /* Stili ripresi da gestioneordini.php per coerenza */
         html, body { background-color: #f8f9fa; color: #495057; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin:0; padding:0; }
@@ -140,7 +140,7 @@ if ($conn->connect_error) {
     <div class="module-page-container">
         <header class="page-header">
             <div class="header-branding">
-                <a href="dashboard.php"><img src="logo.png" alt="Logo Gruppo Vitolo" class="logo"></a>
+                <a href="dashboard.php"><img src="assets/logo.png" alt="Logo Gruppo Vitolo" class="logo"></a>
                 <div class="header-titles">
                     <h1>Le Mie Richieste</h1>
                     <h2>Storico Richieste di Acquisto</h2>

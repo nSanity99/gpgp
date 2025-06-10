@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'db_config.php';
+require_once __DIR__.'/includes/db_config.php';
 
 // --- Sicurezza ---
 ini_set('log_errors', 1); ini_set('error_log', 'C:/xampp/php_error.log'); error_reporting(E_ALL); ini_set('display_errors', 0);
@@ -59,7 +59,7 @@ if ($conn_ro->connect_error) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Riepilogo Ordini Evasi</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/style.css">
     <style>
         /* Ripristino lo stile grafico che ti piace */
         html { box-sizing: border-box; }
@@ -119,7 +119,7 @@ if ($conn_ro->connect_error) {
     <div class="module-page-container">
         <header class="page-header">
             <div class="header-branding">
-                <a href="dashboard.php" class="header-logo-link"><img src="logo.png" alt="Logo Gruppo Vitolo" class="logo"></a>
+                <a href="dashboard.php" class="header-logo-link"><img src="assets/logo.png" alt="Logo Gruppo Vitolo" class="logo"></a>
                 <div class="header-titles">
                     <h1>Report Ordini Evasi</h1>
                     <h2>Applicazione Richiesta Acquisti</h2>
@@ -219,7 +219,7 @@ if ($conn_ro->connect_error) {
             </div>
         </main>
         <footer class="footer-logo-area">
-            <img src="logo.png" alt="Logo Gruppo Vitolo">
+            <img src="assets/logo.png" alt="Logo Gruppo Vitolo">
         </footer>
     </div>
 
