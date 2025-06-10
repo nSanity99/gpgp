@@ -219,7 +219,7 @@ error_log("--- Fine tentativo di login (con ruoli) --- [" . date("Y-m-d H:i:s") 
     <div id="particles-js"></div>
 
     <div class="login-container">
-        <img src="logo.png" class="logo" alt="Logo Gruppo Vitolo">
+        <img src="assets/logo.png" class="logo" alt="Logo Gruppo Vitolo">
         <h1>Gruppo Vitolo</h1>
         <h2>Accesso Riservato</h2>
 

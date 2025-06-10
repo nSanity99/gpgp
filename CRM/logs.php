@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'db_config.php';
+require_once __DIR__.'/includes/db_config.php';
 
 ini_set('log_errors', 1);
 ini_set('error_log', 'C:/xampp/php_error.log');
@@ -81,7 +81,7 @@ if ($conn->connect_error) {
 <div class="page-outer-container">
     <header class="module-header">
         <div class="header-branding">
-            <a href="dashboard.php" class="header-logo-link"><img src="logo.png" alt="Logo Gruppo Vitolo" class="logo"></a>
+            <a href="dashboard.php" class="header-logo-link"><img src="assets/logo.png" alt="Logo Gruppo Vitolo" class="logo"></a>
             <div class="header-titles">
                 <h1>Log Azioni</h1>
                 <h2>Area Amministrazione</h2>
@@ -150,7 +150,7 @@ if ($conn->connect_error) {
         <?php endif; ?>
     </main>
     <footer class="footer-logo-area">
-        <img src="logo.png" alt="Logo Gruppo Vitolo">
+        <img src="assets/logo.png" alt="Logo Gruppo Vitolo">
     </footer>
 </div>
 </body>

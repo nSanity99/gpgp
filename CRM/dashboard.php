@@ -92,7 +92,7 @@ $user_role_display = htmlspecialchars(isset($_SESSION['ruolo']) ? $_SESSION['ruo
     <div class="dashboard-container">
         <header class="dashboard-header">
             <div class="header-branding">
-                <a href="dashboard.php" class="header-logo-link"><img src="logo.png" alt="Logo Gruppo Vitolo" class="logo"></a>
+                <a href="dashboard.php" class="header-logo-link"><img src="assets/logo.png" alt="Logo Gruppo Vitolo" class="logo"></a>
                 <div class="header-titles">
                     <h1>Pannello Principale</h1>
                     <h2><?php echo ($user_role_from_session === 'admin') ? 'Vista Amministrazione' : 'Area Riservata'; ?></h2>
@@ -179,7 +179,7 @@ $user_role_display = htmlspecialchars(isset($_SESSION['ruolo']) ? $_SESSION['ruo
         <?php endif; ?>
 
         <div class="footer-logo-area">
-            <img src="logo.png" alt="Logo Gruppo Vitolo">
+            <img src="assets/logo.png" alt="Logo Gruppo Vitolo">
         </div>
     </div>
 

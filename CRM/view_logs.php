@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'logger.php';
+require_once __DIR__.'/includes/logger.php';
 
 // Consentire accesso solo agli admin
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true ||
@@ -11,7 +11,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true ||
 
 logUserAction("Visualizzazione log di sistema da parte di '" . ($_SESSION['username'] ?? 'N/A') . "'");
 
-$logFile = __DIR__ . '/user_actions.log';
+$logFile = __DIR__ . '/logs/user_actions.log';
 $log_entries = [];
 if (file_exists($logFile)) {
     $lines = file($logFile, FILE_IGNORE_NEW_LINES);
@@ -28,7 +28,7 @@ $user_role_display = htmlspecialchars($_SESSION['ruolo'] ?? 'N/A');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log Utente</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/style.css">
     <style>
         body { background-color: #f8f9fa; color: #495057; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; }
         .page-outer-container { max-width: 1000px; margin: 25px auto; animation: fadeInSlideUp 0.6s ease-out forwards; }
@@ -47,7 +47,7 @@ $user_role_display = htmlspecialchars($_SESSION['ruolo'] ?? 'N/A');
     <div class="page-outer-container">
         <header class="module-header">
             <div class="header-branding">
-                <a href="dashboard.php" class="header-logo-link"><img src="logo.png" alt="Logo Gruppo Vitolo" class="logo"></a>
+                <a href="dashboard.php" class="header-logo-link"><img src="assets/logo.png" alt="Logo Gruppo Vitolo" class="logo"></a>
                 <div class="header-titles">
                     <h1>Log di Sistema</h1>
                 </div>
