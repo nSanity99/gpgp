@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once 'db_config.php';
 
 // --- Blocco Debug e Configurazione Sessione/Log ---
 ini_set('log_errors', 1);
@@ -32,7 +33,6 @@ $gruppi_lavoro = [
 
 
 // --- Connessione al Database e logica per la gestione utenti ---
-$db_host = 'localhost'; $db_user = 'root'; $db_pass = ''; $db_name = 'gruppo_vitolo_db';
 $conn_gu = new mysqli($db_host, $db_user, $db_pass, $db_name);
 
 $users_list = [];

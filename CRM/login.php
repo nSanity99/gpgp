@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once 'db_config.php';
 
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
     header("Location: dashboard.php");
@@ -11,10 +12,6 @@ ini_set('display_errors', 0);
 ini_set('log_errors', 1);
 ini_set('error_log', 'C:/xampp/php_error.log');
 
-$db_host = 'localhost';
-$db_user = 'root';
-$db_pass = '';
-$db_name = 'gruppo_vitolo_db';
 $login_error = '';
 
 error_log("--- Inizio tentativo di login (con ruoli) --- [" . date("Y-m-d H:i:s") . "]");
