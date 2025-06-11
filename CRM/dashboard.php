@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once 'db_config.php';
 
 // --- Blocco Debug e Configurazione Sessione/Log ---
 ini_set('log_errors', 1);

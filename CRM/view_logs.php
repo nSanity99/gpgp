@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once 'db_config.php';
 require_once 'logger.php';
 
 // Consentire accesso solo agli admin

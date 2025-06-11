@@ -1,5 +1,6 @@
 <?php
-require 'connessione.php'; // connessione al DB
+require_once 'db_config.php';
+$conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = filter_input(INPUT_POST, 'id_segnalazione', FILTER_VALIDATE_INT);
